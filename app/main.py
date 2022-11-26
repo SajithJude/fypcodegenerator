@@ -21,7 +21,7 @@ MAGE_EMOJI_URL = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thu
 
 # Set page title and favicon.
 st.set_page_config(
-    page_title="Traingenerator", page_icon=MAGE_EMOJI_URL,
+    page_title="Traingenerator"
 )
 
 
@@ -51,21 +51,18 @@ else:
 
 # Display header.
 st.markdown("<br>", unsafe_allow_html=True)
-st.image(MAGE_EMOJI_URL, width=80)
+# st.image(MAGE_EMOJI_URL, width=80)
 
 """
-# Code Generator for Machine Learning
+# Final year research, ML code generator 
 
-[![Star](https://img.shields.io/github/stars/jrieke/traingenerator.svg?logo=github&style=social)](https://gitHub.com/jrieke/traingenerator/stargazers)
-&nbsp[![Follow](https://img.shields.io/twitter/follow/jrieke?style=social)](https://www.twitter.com/jrieke)
-&nbsp[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee--yellow.svg?logo=buy-me-a-coffee&logoColor=orange&style=social)](https://www.buymeacoffee.com/jrieke)
 """
 st.markdown("<br>", unsafe_allow_html=True)
-"""Jumpstart your machine learning code:
+""":
 
-1. Specify model in the sidebar *(click on **>** if closed)*
+1. Select your model in the sidebar *(click on **>** if closed)*
 2. Training code will be generated below
-3. Download and do magic! :sparkles:
+3. Download code and run
 
 ---
 """
@@ -102,9 +99,9 @@ for template_dir in template_dirs:
 # selectors determine which template (from template_dict) is used (and also which
 # template-specific sidebar components are shown below).
 with st.sidebar:
-    st.info(
-        "🎈 **NEW:** Add your own code template to this site! [Guide](https://github.com/jrieke/traingenerator#adding-new-templates)"
-    )
+    # st.info(
+    #     "🎈 **NEW:** Add your own code template to this site! [Guide](https://github.com/jrieke/traingenerator#adding-new-templates)"
+    # )
     # st.error(
     #     "Found a bug? [Report it](https://github.com/jrieke/traingenerator/issues) 🐛"
     # )
