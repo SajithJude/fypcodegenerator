@@ -54,11 +54,11 @@ st.markdown("<br>", unsafe_allow_html=True)
 # st.image(MAGE_EMOJI_URL, width=80)
 
 """
-# Final year research, ML code generator 
+# Final year research project, ML code generator 
 
 """
 st.markdown("<br>", unsafe_allow_html=True)
-""":
+"""
 
 1. Select your model in the sidebar *(click on **>** if closed)*
 2. Training code will be generated below
@@ -99,12 +99,7 @@ for template_dir in template_dirs:
 # selectors determine which template (from template_dict) is used (and also which
 # template-specific sidebar components are shown below).
 with st.sidebar:
-    # st.info(
-    #     "🎈 **NEW:** Add your own code template to this site! [Guide](https://github.com/jrieke/traingenerator#adding-new-templates)"
-    # )
-    # st.error(
-    #     "Found a bug? [Report it](https://github.com/jrieke/traingenerator/issues) 🐛"
-    # )
+
     st.write("## Task")
     task = st.selectbox(
         "Which problem do you want to solve?", list(template_dict.keys())
@@ -139,7 +134,7 @@ notebook = utils.to_notebook(notebook_code)
 # TODO: Maybe refactor this (with some of the stuff in utils.py) to buttons.py.
 st.write("")  # add vertical space
 col1, col2, col3 = st.beta_columns(3)
-open_colab = col1.button("🚀 Open in Colab")  # logic handled further down
+# open_colab = col1.button("🚀 Open in Colab")  # logic handled further down
 with col2:
     utils.download_button(code, "generated-code.py", "🐍 Download (.py)")
 with col3:
@@ -157,19 +152,16 @@ st.code(code)
 
 # Handle "Open Colab" button. Down here because to open the new web page, it
 # needs to create a temporary element, which we don't want to show above.
-if open_colab:
-    if colab_enabled:
-        colab_link = add_to_colab(notebook)
-        utils.open_link(colab_link)
-    else:
-        colab_error.error(
-            """
-            **Colab support is disabled.** (If you are hosting this: Create a Github 
-            repo to store notebooks and register it via a .env file)
-            """
-        )
+# if open_colab:
+#     if colab_enabled:
+#         colab_link = add_to_colab(notebook)
+#         utils.open_link(colab_link)
+#     else:
+#         colab_error.error(
+#             """
+#             **Colab support is disabled.** (If you are hosting this: Create a Github 
+#             repo to store notebooks and register it via a .env file)
+#             """
+#         )
 
 
-# Tracking pixel to count number of visitors.
-if os.getenv("TRACKING_NAME"):
-    f"![](https://jrieke.goatcounter.com/count?p={os.getenv('TRACKING_NAME')})"
