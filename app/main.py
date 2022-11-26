@@ -60,7 +60,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 """
 
-1. Select your model in the sidebar *(click on **>** if closed)*
+1. Select your model and other parameters from the sidebar *(click on **>** if closed)*
 2. Training code will be generated below
 3. Download code and run
 

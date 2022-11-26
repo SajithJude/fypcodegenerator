@@ -41,14 +41,13 @@ def show():
                 ```
                 train
                 +-- dogs
-                |   +-- lassie.jpg
-                |   +-- komissar-rex.png
+                |   +-- doberman.jpg
+                |   +-- labrador.png
                 +-- cats
-                |   +-- garfield.png
-                |   +-- smelly-cat.png
+                |   +-- persian.png
+                |   +-- smelly-cat-from-friends.png
                 ```
                 
-                See also [this example dir](https://github.com/jrieke/traingenerator/tree/main/data/image-data)
                 """
             )
 
